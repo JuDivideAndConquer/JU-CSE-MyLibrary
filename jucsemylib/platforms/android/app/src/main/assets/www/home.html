@@ -5,17 +5,19 @@
         <link rel="stylesheet" type="text/css" href="css/home.css">
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/home.js"></script>
         <title>JU-CSE-MyLib</title>
     </head>
     <body>
         <div id="sidenav">
+            <div class="sidenavItems" id="hideSidenavButton" onclick="hideSidenav()">&times;</div>
             <div class="sidenavItems">Issue Book</div>
             <div class="sidenavItems">Search for books</div>
             <div class="sidenavItems">My issued books</div>
             <div class="sidenavItems">Settings</div>
         </div>
         <div id="topBar">
-            <div id="menuIcon">
+            <div id="menuIcon" onclick="showSidenav()">
                 <div></div>
                 <div></div>
                 <div></div>

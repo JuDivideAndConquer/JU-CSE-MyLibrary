@@ -2,6 +2,8 @@ body
 {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 #sidenav
@@ -15,13 +17,17 @@ body
     left: 0;
     z-index: 1;
     overflow-x: hidden;
+    transition: .5s ease;
 }
 
 .sidenavItems
 {  
     width: inherit;
     padding: 5vw;
-    display: block;
+    display: none;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
 }
 
 #topBar
@@ -52,4 +58,10 @@ body
 {
     padding: inherit;
     float: left;
+}
+
+#hideSidenavButton
+{
+    text-align: right;
+    font-size: 40px;
 }
