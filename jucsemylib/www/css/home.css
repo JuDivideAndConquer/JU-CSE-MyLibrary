@@ -1,0 +1,55 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+#sidenav
+{
+    background-color: rgb(20,20,20);
+    color: rgb(200,200,200);;
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.sidenavItems
+{  
+    width: inherit;
+    padding: 5vw;
+    display: block;
+}
+
+#topBar
+{
+    padding: 3vw;
+    margin: 0;
+    width: 100vw;
+    overflow: auto;
+    background-color: #263238;
+    color: rgb(200,200,200);
+}
+
+#menuIcon
+{
+    float: left;
+    margin: 5px;
+}
+#menuIcon > div
+{
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    background-color: rgb(200,200,200);
+    border-radius: 3px;
+}
+
+#topBarHome
+{
+    padding: inherit;
+    float: left;
+}
