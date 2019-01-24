@@ -1,0 +1,7 @@
+{
+  "name": "JUCSE-MyLib",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
