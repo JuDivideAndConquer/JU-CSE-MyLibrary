@@ -23,5 +23,11 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <platform name="android">
+        <icon density="ldpi" src="res/icon/android/36.png" />
+        <icon density="mdpi" src="res/icon/android/48.png" />
+        <icon density="hdpi" src="res/icon/android/72.png" />
+        <icon density="xhdpi" src="res/icon/android/96.png" />
+    </platform>
     <engine name="android" spec="^7.1.4" />
 </widget>
