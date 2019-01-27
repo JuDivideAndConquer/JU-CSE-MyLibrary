@@ -1,21 +1,26 @@
-/*#B79486   #9965F4    #EFE5FD*/
-* {box-sizing: border-box}
-.extra-info{  color:#B79486;}
-.box{margin-left:30%;}
+/*#263238*/
+/* {box-sizing: border-box}*/
+.extra-info{  color:grey;}
+.box{margin-left:2%;}
 .header{
-	background:#9965F4;
-	color:white;
-	 padding: 5px;
+	width: 95%;
+	background: #263238;
+	color: white;
+	padding: 14px 20px;
+	margin-left: -4%;
+	margin-top: -4%;
+	overflow: auto;
 }
 
 /* input fields */
   input[type=text], input[type=password] {
-  width: 65%;
+  width: 90%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  border-radius: 5px;
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -24,22 +29,23 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 hr {
-  border: 1px solid #9965F4;
-  margin-left:-4%;
+  border: 1px solid #263238;
+  margin-left:-2%;
   margin-bottom: 25px;
-  width:77%;
+  width:100%;
 }
 
 /* Sign up button */
 button {
-  background-color:#9965F4 ;
+  background-color:#263238;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 65%;
+  width: 95%;
   opacity: 0.9;
+  border-radius: 5px;
 }
 
 button:hover {
