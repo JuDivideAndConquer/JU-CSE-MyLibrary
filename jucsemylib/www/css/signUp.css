@@ -1,12 +1,14 @@
 /*#263238*/
 /* {box-sizing: border-box}*/
+@import url("theme.css");
+
 .extra-info{  color:grey;}
 .box{margin-left:2%;}
 .header{
-	width: 95%;
+	width: 95.56%;
 	background: #263238;
 	color: white;
-	padding: 14px 20px;
+	padding: 30px;
 	margin-left: -4%;
 	margin-top: -4%;
 	overflow: auto;
@@ -37,8 +39,8 @@ hr {
 
 /* Sign up button */
 button {
-  background-color:#263238;
-  color: white;
+  background-color: var(--secondary);
+  color: black;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
