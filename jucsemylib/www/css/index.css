@@ -1,6 +1,8 @@
+@import url("theme.css");
 body, html{
 	height: 100%;
 	margin: 0;
+	text-align: center;
 }
 
 
@@ -10,4 +12,14 @@ body, html{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	padding-top:50%; 
+}
+#tempLoginButton{
+    text-align: center;
+}
+button {
+    top: 50%;
+    font-size: 2em;
+	line-height: 0.9em;
+	background-color: var(--primary-light);
 }
