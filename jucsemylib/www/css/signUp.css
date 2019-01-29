@@ -5,13 +5,14 @@
 .extra-info{  color:grey;}
 .box{margin-left:2%;}
 .header{
-	width: 95.56%;
+	width: 106.3%;
 	background: #263238;
 	color: white;
 	padding: 30px;
 	margin-left: -4%;
 	margin-top: -4%;
-	overflow: auto;
+	overflow: hidden;
+	box-sizing: border-box;
 }
 
 /* input fields */
