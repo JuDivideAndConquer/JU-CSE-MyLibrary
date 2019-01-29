@@ -1,0 +1,39 @@
+@import url("theme.css");
+body{
+  font-family: Arial, Helvetica, 
+  sans-serif;
+  background-color: silver;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0; 
+  width: 
+}
+button {
+  background-color: var(--secondary);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+button .
+
+form {
+	border: 3px solid #f1f1f1;
+	background-color: #DCDCDC;
+}
+input[type="email"]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
