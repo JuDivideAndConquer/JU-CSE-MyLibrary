@@ -12,9 +12,9 @@ body
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     overflow-x: hidden;
-    transition: .5s ease;
+    transition: .01s ease;
 }
 
 .sidenavItems
@@ -33,21 +33,26 @@ body
     padding: 3vw;
     margin: 0;
     width: 100vw;
+    height: 60px;
     overflow: auto;
     background-color: #263238;
     color: rgb(200,200,200);
+    display: flex;
+    position: fixed;
+    z-index: 1;
 }
 
-#menuIcon
+#topBar > *
 {
-    float: left;
-    margin: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
+
 #menuIcon > div
 {
     width: 35px;
     height: 5px;
-    margin: 6px 0;
+    margin: 5px 0;
     background-color: rgb(200,200,200);
     border-radius: 3px;
 }
@@ -62,4 +67,12 @@ body
 {
     text-align: right;
     font-size: 40px;
+}
+
+#content
+{
+    position: absolute;
+    margin-top: 60px;
+    height: 100%;
+    width: 100%; 
 }
