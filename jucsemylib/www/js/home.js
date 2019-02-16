@@ -72,3 +72,29 @@ document.getElementById('sidenav').addEventListener('touchend',function()
         showSidenav();
     }
 });
+
+
+//retrives the login page
+function getLoginPage(callback){
+    var request = new XMLHttpRequest();
+    request.open('GET','./login.html');
+    request.send(null);
+    request.onload = function(){
+        callback(request.responseText);
+    };
+}
+
+//fucntion to load the login page
+function loadLoginPage(){
+    var content = document.getElementById('content');
+    getLoginPage(function(loginPage){
+        content.innerHTML = loginPage;
+    })
+}
+
+
+
+//main fucntion--------------------------------------------------------
+document.addEventListener('deviceready',function(){
+    loadLoginPage();
+});
