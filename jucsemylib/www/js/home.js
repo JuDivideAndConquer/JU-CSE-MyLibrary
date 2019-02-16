@@ -1,19 +1,19 @@
 //function to show the side navigation bar
 function showSidenav()
 {
-    $('#sidenav').css('transition','0.5s ease')
-    $('#sidenav').css('width','60%');
-    $('.sidenavItems').css('display','block');
-    console.log("menu icon clicked");
+	$('#sidenav').css('transition','0.5s ease')
+	$('#sidenav').css('width','60%');
+	$('.sidenavItems').css('display','block');
+	console.log("menu icon clicked");
 }
 
 //fucntion to collapse the side navigation bar
 function hideSidenav()
 {   
-    $('#sidenav').css('transition','0.5s ease')
-    $('#sidenav').css('width','0');
-    $('.sidenavItems').css('display','none');
-    console.log("sidenav hide icon clicked");
+	$('#sidenav').css('transition','0.5s ease')
+	$('#sidenav').css('width','0');
+	$('.sidenavItems').css('display','none');
+	console.log("sidenav hide icon clicked");
 }
 
 var touchx;
@@ -27,74 +27,74 @@ var minXHideSidenav = 100;
 //event listeners to enable swiping to show side navigation bar
 document.getElementById('content').addEventListener('touchstart',function(evt)
 {
-    touchx = evt.touches[0].clientX;
-    console.log(touchx);
+	touchx = evt.touches[0].clientX;
+	console.log(touchx);
 });
 
 document.getElementById('content').addEventListener('touchmove',function(evt)
 {
-    var touch = evt.touches[0];
-    console.log(touch.clientX);
+	var touch = evt.touches[0];
+	console.log(touch.clientX);
 
-    if(touchx<5)
-    {
-        $('#sidenav').css('transition','0.1s ease')
-        $('#sidenav').css('width',touch.clientX);
-    }
+	if(touchx<5)
+	{
+		$('#sidenav').css('transition','0.1s ease')
+		$('#sidenav').css('width',touch.clientX);
+	}
 });
 
 document.getElementById('content').addEventListener('touchend',function()
 {
-    if(touchx<minXShowSidenav)
-    {
-        showSidenav();
-    }
+	if(touchx<minXShowSidenav)
+	{
+		showSidenav();
+	}
 });
 
 // event listeners to enable swiping to collapse side navigation bar
 document.getElementById('sidenav').addEventListener('touchmove',function(evt)
 {
-    var touch = evt.touches[0];
-    console.log(touch.clientX);
-    $('#sidenav').css('transition','0.1s ease')
-    $('#sidenav').css('width',touch.clientX);
-    touchx=touch.clientX;
+	var touch = evt.touches[0];
+	console.log(touch.clientX);
+	$('#sidenav').css('transition','0.1s ease')
+	$('#sidenav').css('width',touch.clientX);
+	touchx=touch.clientX;
 });
 
 document.getElementById('sidenav').addEventListener('touchend',function()
 {
-    if(touchx<minXHideSidenav)
-    {
-        hideSidenav();
-    }
-    else
-    {
-        showSidenav();
-    }
+	if(touchx<minXHideSidenav)
+	{
+		hideSidenav();
+	}
+	else
+	{
+		showSidenav();
+	}
 });
 
 
 //retrives the login page
 function getLoginPage(callback){
-    var request = new XMLHttpRequest();
-    request.onload = function(){
-        callback(request.responseText);
-    };
-    request.open('GET','./login.html');
-    request.send(null);
+	var request = new XMLHttpRequest();
+	request.onload = function(){
+		callback(request.responseText);
+	};
+	request.open('GET','./login.html');
+	request.send(null);
 }
 
 //fucntion to load the login page
 function loadLoginPage(){
-    var content = document.getElementById('content');
-    getLoginPage(function(loginPage){
-        content.innerHTML = loginPage;
-    })
+	var content = document.getElementById('content');
+	getLoginPage(function(loginPage){
+		content.innerHTML = loginPage;
+	})
 }
 
 
 
 //main fucntion--------------------------------------------------------
 document.addEventListener('deviceready',function(){
-    loadLoginPage();
+	loadLoginPage();
 });
