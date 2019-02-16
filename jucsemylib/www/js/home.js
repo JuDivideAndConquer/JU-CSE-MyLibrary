@@ -77,11 +77,11 @@ document.getElementById('sidenav').addEventListener('touchend',function()
 //retrives the login page
 function getLoginPage(callback){
     var request = new XMLHttpRequest();
-    request.open('GET','./login.html');
-    request.send(null);
     request.onload = function(){
         callback(request.responseText);
     };
+    request.open('GET','./login.html');
+    request.send(null);
 }
 
 //fucntion to load the login page
