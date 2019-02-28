@@ -11,24 +11,7 @@ function hide_icon(){
 	
 }
 
-//function to adjust the view
-/*function height_adjust(){
-	var h = window.innerHeight;
-	var hf=h-60px;
-	var c=document.getElementById('content');
-	c.style.height= hf;
-	
-}
-//height_adjust();*/
 
 
-//main fucntion--------------------------------------------------------
-document.addEventListener('deviceready',function(){
-	//loadLoginPage();
-
-	hide_icon();
-	change_text();
-	console.log("signup page loaded");
-});
 
 

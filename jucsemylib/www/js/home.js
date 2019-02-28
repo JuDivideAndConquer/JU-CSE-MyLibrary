@@ -110,6 +110,9 @@ function loadSignUpPage(){
 	getSignUpPage(function(signUp){
 		content.innerHTML = signUp;
 	})
+	hide_icon();
+	change_text();
+	console.log("signup page loaded");
 }
 
 
