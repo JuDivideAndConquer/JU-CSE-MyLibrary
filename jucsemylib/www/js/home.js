@@ -73,7 +73,6 @@ document.getElementById('sidenav').addEventListener('touchend',function()
 	}
 });
 
-
 //retrives the login page
 function getLoginPage(callback){
 	var request = new XMLHttpRequest();
@@ -92,9 +91,30 @@ function loadLoginPage(){
 	})
 }
 
+//retrives the login page
+function getSignUpPage(callback){
+	var request = new XMLHttpRequest();
+	request.onload = function(){
+		callback(request.responseText);
+	};
+	request.open('GET','./signUp.html');
+	request.send(null);
+}
+
+
+
+
+//fucntion to load the signup page
+function loadSignUpPage(){
+	var content = document.getElementById('content');
+	getSignUpPage(function(signUp){
+		content.innerHTML = signUp;
+	})
+}
 
 
 //main fucntion--------------------------------------------------------
 document.addEventListener('deviceready',function(){
 	loadLoginPage();
+	//loadSignUpPage();
 });

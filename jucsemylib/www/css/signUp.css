@@ -1,18 +1,20 @@
 /*#263238*/
 /* {box-sizing: border-box}*/
 @import url("theme.css");
+/*{ border: 1px solid red; }*/
+
+
+
+body{
+	margin: 0;
+	overflow: hidden;
+}
 
 .extra-info{  color:grey;}
-.box{margin-left:2%;}
-.header{
-	width: 106.3%;
-	background: #263238;
-	color: white;
-	padding: 30px;
-	margin-left: -4%;
-	margin-top: -4%;
+.box{
+	margin-left:2%;
+	width: 96%;
 	overflow: hidden;
-	box-sizing: border-box;
 }
 
 /* input fields */
@@ -33,7 +35,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 hr {
   border: 1px solid #263238;
-  margin-left:-2%;
+  margin-left:0%;
   margin-bottom: 25px;
   width:100%;
 }
@@ -43,7 +45,7 @@ button {
   background-color: var(--secondary);
   color: black;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin-left: 2.5%;
   border: none;
   cursor: pointer;
   width: 95%;

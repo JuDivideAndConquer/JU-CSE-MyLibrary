@@ -45,7 +45,7 @@ body
 #topBar > *
 {
     margin-top: auto;
-    margin-bottom: auto;
+   margin-bottom: auto;
 }
 
 #menuIcon > div
@@ -72,7 +72,7 @@ body
 #content
 {
     position: absolute;
-    margin-top: 60px;
-    height: 100%;
+    top: 60px;
+    /*height: 100%;*/
     width: 100%; 
 }
