@@ -115,6 +115,9 @@ function loadSignUpPage(){
 
 //main fucntion--------------------------------------------------------
 document.addEventListener('deviceready',function(){
-	loadLoginPage();
+	var PREF_LOGGED_IN = localStorage.getItem('PREF_LOGGED_IN');
+	if(PREF_LOGGED_IN == null || PREF_LOGGED_IN == 'false'){
+		loadLoginPage();
+	}
 	//loadSignUpPage();
 });
