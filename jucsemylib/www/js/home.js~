@@ -124,7 +124,7 @@ function getHome(callback){
 //fucntion to load the home page
 function loadHome(){
 	var content = document.getElementById('content');
-	getHome(function(home){
+	getSignUpPage(function(home){
 		content.innerHTML = home;
 	})
 	console.log("you are home");
