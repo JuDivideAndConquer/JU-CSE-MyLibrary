@@ -140,6 +140,6 @@ document.addEventListener('deviceready',function(){
 		loadLoginPage();
 	}*/
 	//loadSignUpPage();
-	loadHome();
-	//loadLoginPage();
+	//loadHome();
+	loadLoginPage();
 });
