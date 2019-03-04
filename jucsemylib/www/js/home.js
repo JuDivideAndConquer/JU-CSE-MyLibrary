@@ -73,6 +73,20 @@ document.getElementById('sidenav').addEventListener('touchend',function()
 	}
 });
 
+//======================================functions for login page=======================================
+
+//function to change text in topBar
+function change_text_login(){
+	var topnav=document.getElementById('topBar');
+	topnav.style.display= "none";
+}
+
+//function to hide menu icon
+function hide_icon_login(){
+	var icon=document.getElementById('menuIcon');
+	icon.style.display= "none";
+	
+}
 //retrives the login page
 function getLoginPage(callback){
 	var request = new XMLHttpRequest();
@@ -93,6 +107,31 @@ function loadLoginPage(){
 	console.log("login kore now sona");
 }
 
+//=====================end of the function for the login page=================================
+
+//=====================functions for forget password page======================================
+
+//retrives the forget password page
+function getforgetPage(callback){
+	var request = new XMLHttpRequest();
+	request.onload = function(){
+		callback(request.responseText);
+	};
+	request.open('GET','./forgetpasword.html');
+	request.send(null);
+}
+//fucntion to load the forget page
+function loadforgetPage(){
+	var content = document.getElementById('content');
+	getforgetPage(function(forgetpasword){
+		content.innerHTML = forgetpasword;
+	})
+	//hide_icon();
+	//change_text_login();
+	console.log("sona ato vhule gele CO ki kore porbe");
+}
+
+//============================end of the function for forget password======================
 
 //retrives the signup page
 function getSignUpPage(callback){
@@ -109,7 +148,7 @@ function loadSignUpPage(){
 	getSignUpPage(function(signUp){
 		content.innerHTML = signUp;
 	})
-	hide_icon();
+	hide_icon_login();
 	change_text();
 	console.log("signup page loaded");
 }
@@ -144,5 +183,6 @@ document.addEventListener('deviceready',function(){
 	}*/
 	//loadSignUpPage();
 	//loadHome();
+	window.onhashchange=loadforgetPage;
 	loadLoginPage();
 });
