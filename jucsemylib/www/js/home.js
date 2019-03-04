@@ -88,6 +88,9 @@ function loadLoginPage(){
 	getLoginPage(function(loginPage){
 		content.innerHTML = loginPage;
 	})
+	hide_icon();
+	change_text_login();
+	console.log("login kore now sona");
 }
 
 
