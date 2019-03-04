@@ -72,3 +72,18 @@ document.getElementById('sidenav').addEventListener('touchend',function()
         showSidenav();
     }
 });
+(function(){
+    var partialsCache = {}
+
+    function fetchFile(path, callback){
+
+        var request =new XMLHttpRequest();
+
+        request.onload = function(){
+            callback(request.responseText);
+        };
+
+        request.open("GET",path);
+        request.send(null);
+    }
+})
