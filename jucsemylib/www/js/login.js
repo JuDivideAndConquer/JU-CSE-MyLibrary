@@ -13,7 +13,7 @@ function getforgetPage(callback){
 }
 //fucntion to load the forget page
 function loadforgetPage(){
-	var content = document.getElementById('content');
+	var content = document.getElementById('container');
 	getforgetPage(function(forgetpasword){
 		content.innerHTML = forgetpasword;
 	})
