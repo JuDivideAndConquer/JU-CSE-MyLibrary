@@ -5,5 +5,4 @@
     --secondary: #FFCC80;
     --dark: #212121;
     --light: #FAFAFA;
-	--faint: grey;
 }

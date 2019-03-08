@@ -1,0 +1,51 @@
+@import url("theme.css");
+body{
+	background: var(--dark);
+}
+img{
+	border-radius: 50%;
+	margin-left: 25%;
+	width:100px;
+	height:100px;
+	border: 2px dashed var(--light);
+	padding: 30px;
+}
+
+.info{
+	text-align: center;
+	font-family: 'Arvo', serif;
+	color: var(--light);
+}
+
+hr {
+  border: 1px solid var(--light);
+}
+
+.book_info{
+	color:var(--secondary);
+	text-align: center;
+}
+
+.extra_info{
+	color:var(--faint);
+	text-align: center;
+}
+
+h2{display :inline;}
+
+.reminder{
+	background: var(--primary-dark);
+	color:var(--light);
+	padding: 20px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	bottom:0;
+}
+
+i{
+	color:var(--faint);
+	font-size:48px;
+	display: inline-block;
+	text-align: center;
+	margin-left:35%;
+}
