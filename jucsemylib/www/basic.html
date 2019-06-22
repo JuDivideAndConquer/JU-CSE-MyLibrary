@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Library</title>
+    </head>
+    <body>
+        <div id="sidenav">
+            <div class="sidenavItems" id="hideSidenavButton" onclick="hideSidenav()">&times;</div>
+            <div class="sidenavItems" onclick="loadPage('homescreen','Home')">Home</div>
+            <div class="sidenavItems" onclick="loadPage('checkBookStatus','Search A Book')">Check Book Status</div>
+            <div class="sidenavItems" onclick="loadPage('issueBook','Issue Book')">Issue Book</div>
+            <div class="sidenavItems" onclick="loadPage('returnBook','Return Book')">Return Book</div>
+            <div class="sidenavItems" onclick="loadPage('reportDamage','Report Damage/Lost')">Report Damaga/Lost</div>
+        </div>
+        <div id="topBar">
+            <div id="menuIcon" onclick="showSidenav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="topBarHome">Home</div>
+        </div>
+        <div id="content">
+            <!--content loads here-->
+        </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAn8SKPCJYqist9sWw4kl0hM0Ii5AtuvgA",
+        authDomain: "ju-cse-library-b6391.firebaseapp.com",
+        databaseURL: "https://ju-cse-library-b6391.firebaseio.com",
+        projectId: "ju-cse-library-b6391",
+        storageBucket: "ju-cse-library-b6391.appspot.com",
+        messagingSenderId: "630315082209"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+        
+    </body>
+</html>
