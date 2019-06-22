@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body>
+	<div id="box1">
+		<h2>Login</h2>
+	</div>
+	<form name="loginForm" onsubmit="return login(document.loginForm.uname.value,document.loginForm.psw.value)">
+		<div class="container">
+			<label for="cardno"><b>CardNo</b></label>
+			<input type="text" placeholder="Enter your card No" name="uname" required>
+
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required>
+
+			<button type="submit">Login</button>
+			<label>
+				<input type="checkbox" checked="checked" name="remember"> Remember me
+			</label>
+		</div>
+		<div class="container" style="background-color:#f1f1f1">
+			<span class="psw"><a href='forgetpasword.html'>Forgot password?</a></span>
+		</div>
+	</form>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+
+</html>

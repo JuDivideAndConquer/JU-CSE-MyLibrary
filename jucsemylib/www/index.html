@@ -1,36 +1,37 @@
 <!DOCTYPE html>
+
 <html>
+    <head>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Library</title>
+    </head>
+    <body>
+        <div id="sidenav">
+            <div class="sidenavItems" id="hideSidenavButton" onclick="hideSidenav()">&times;</div>
+            <div class="sidenavItems" onclick="loadPage('homescreen','Home')">Home</div>
+            <div class="sidenavItems" onclick="loadPage('checkBookStatus','Search A Book')">Check Book Status</div>
+            <div class="sidenavItems" onclick="loadPage('issueBook','Issue Book')">Issue Book</div>
+            <div class="sidenavItems" onclick="loadPage('returnBook','Return Book')">Return Book</div>
+            <div class="sidenavItems" onclick="loadPage('reportDamage','Report Damage/Lost')">Report Damaga/Lost</div>
+        </div>
+        <div id="topBar">
+            <div id="menuIcon" onclick="showSidenav()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="topBarHome">Home</div>
+        </div>
+        <div id="content">
+            <!--content loads here-->
+        </div>
 
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
-</head>
-
-<body>
-	<div id="box1">
-		<h2>Login</h2>
-	</div>
-	<form name="loginForm" onsubmit="return login(document.loginForm.uname.value,document.loginForm.psw.value)">
-		<div class="container">
-			<label for="cardno"><b>CardNo</b></label>
-			<input type="text" placeholder="Enter your card No" name="uname" required>
-
-			<label for="psw"><b>Password</b></label>
-			<input type="password" placeholder="Enter Password" name="psw" required>
-
-			<button type="submit">Login</button>
-			<label>
-				<input type="checkbox" checked="checked" name="remember"> Remember me
-			</label>
-		</div>
-		<div class="container" style="background-color:#f1f1f1">
-			<span class="psw"><a href='forgetpasword.html'>Forgot password?</a></span>
-		</div>
-	</form>
-
-	<script type="text/javascript" src="cordova.js"></script>
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/login.js"></script>
-</body>
-
+    
+    </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+        
+    </body>
 </html>
