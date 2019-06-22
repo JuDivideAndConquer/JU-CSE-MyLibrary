@@ -120,9 +120,13 @@ function change_text(text){
 	topnav.innerHTML= text;
 }
 
-function hide_topbar(){
-	$('#topBarHome').css('display','none');
+//function to hide menu icon
+function hide_icon(){
+	var icon=document.getElementById('menuIcon');
+	icon.style.display= "none";
+	
 }
+
 
 //-----------------------------------------------------------------
 //retrives the page
@@ -135,11 +139,14 @@ function getPage(callback,name){
 	request.send(null);
 }
 //fucntion to load the page
-function loadPage(name,text){
+function loadPage(name,text,data){
 	var content = document.getElementById('content');
 	getPage(function(home){
 		content.innerHTML = home;
 	},name)
+	if(name=='signup' || name=='login'){
+		hide_icon();
+	}
 	change_text(text);
 	hideSidenav();
 
@@ -149,11 +156,11 @@ document.addEventListener('deviceready',function(){
 	var PREF_LOGGED_IN = localStorage.getItem('PREF_LOGGED_IN');
 	var PREF_SIGNED_UP = localStorage.getItem('PREF_SIGNED_UP');
 	if(PREF_SIGNED_UP == null || PREF_SIGNED_UP == 'false'){
-		loadPage('signup','Sign Up');
+		loadPage('signup','Sign Up',null);
 		PREF_SIGNED_UP='true';
 	}
 	else if(PREF_LOGGED_IN == null || PREF_LOGGED_IN == 'false'){
-		loadPage('login','Login');
+		loadPage('login','Login',null);
 	}
 	else{
 		loadPage('homescreen','Home');
