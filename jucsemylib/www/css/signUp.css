@@ -1,9 +1,5 @@
-/*#263238*/
-/* {box-sizing: border-box}*/
+
 @import url("theme.css");
-/*{ border: 1px solid red; }*/
-
-
 
 body{
 	margin: 0;
@@ -13,7 +9,7 @@ body{
 .extra-info{  color:grey;}
 .box{
 	margin-left:2%;
-	width: 96%;
+	width: 100%;
 	overflow: hidden;
 }
 
