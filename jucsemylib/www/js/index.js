@@ -73,45 +73,6 @@ document.getElementById('sidenav').addEventListener('touchend',function()
 	}
 });
 
-/*
-//retrives the login page
-function getLoginPage(callback){
-	var request = new XMLHttpRequest();
-	request.onload = function(){
-		callback(request.responseText);
-	};
-	request.open('GET','./login.html');
-	request.send(null);
-}
-//fucntion to load the login page
-function loadLoginPage(){
-	var content = document.getElementById('content');
-	getLoginPage(function(loginPage){
-		content.innerHTML = loginPage;
-	})
-}
-
-
-//retrives the signup page
-function getSignUpPage(callback){
-	var request = new XMLHttpRequest();
-	request.onload = function(){
-		callback(request.responseText);
-	};
-	request.open('GET','./signUp.html');
-	request.send(null);
-}
-//fucntion to load the signup page
-function loadSignUpPage(){
-	var content = document.getElementById('content');
-	getSignUpPage(function(signUp){
-		content.innerHTML = signUp;
-	})
-	hide_icon();
-	change_text();
-	console.log("signup page loaded");
-}
-*/
 
 //---------------------------------------------------------------------------------
 //function to change text in topBar
@@ -121,12 +82,11 @@ function change_text(text){
 }
 
 //function to hide menu icon
-function hide_topbar(){
-	var icon=document.getElementById('topBar');
-	icon.style.display= 'none';
-	var icon1=document.getElementById('menuIcon');
-	icon1.style.display='none';
-	$('#content').css('width','100%');
+function hide_icon(){
+	var icon=document.getElementById('menuIcon');
+	icon.style.display= "none";
+	var sidenav=document.getElementById('sidenav');
+	sidenav.style.display= "none";
 }
 
 
@@ -147,7 +107,7 @@ function loadPage(name,text,data){
 		content.innerHTML = home;
 	},name)
 	if(name=='signUp' || name=='login'){
-		hide_topbar();
+		hide_icon();
 	}
 	change_text(text);
 	hideSidenav();

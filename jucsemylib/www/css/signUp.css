@@ -1,16 +1,14 @@
 
 @import url("theme.css");
 
-body{
-	margin: 0;
-	overflow: hidden;
-}
 
+
+#content {box-sizing : box-border;}
 .extra-info{  color:grey;}
 .box{
-	margin-left:2%;
-	width: 100%;
+	padding: 10px;
 	overflow: hidden;
+	box-sizing : box-border;
 }
 
 /* input fields */

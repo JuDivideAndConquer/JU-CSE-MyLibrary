@@ -20,17 +20,17 @@ if($link)
 <?php
 $cd = "'".strval($_POST['cd'])."'";
 $pw = "'".strval($_POST['pw'])."'";
-$nm = "'".strval($_POST['nm'])."'";
-$cs = "'".strval($_POST['cs'])."'";
+
 $return_array = array();
-$sql = "INSERT INTO user_table VALUES($nm,$cd,$cs,'1','0',$pw) ;";
+$sql = "SELECT * FROM user_table WHERE card_number=$cd AND password=$pw ; ";
 
-if ($link->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $link->error;
-}
 
-$link->close();
+$result = mysqli_query($link , $sql) or die(mysqli_error($link)."".$sql);
+$row=mysqli_fetch_assoc($result);
+
+
+
+$x = json_encode($row);
+echo $x ;
+mysqli_close($link);
 ?>
-
