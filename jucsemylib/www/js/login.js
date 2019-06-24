@@ -1,5 +1,31 @@
-function loadHomePage(data)
-{
+//changes home params according to user data
+function changeHomeParams(data){
+	var arr = JSON.parse(data,true);
+	//alert(arr["name"]);
+	document.getElementById('name').innerHTML = arr['name'];
+	console.log(arr['name']);
+	$("#designation").html(arr["course"]);
+	$("#num").html(arr["books_issued"]);
+}
+
+
+
+//fucntion to load the page
+function loadHome(data) {
+	var request = new XMLHttpRequest();
+	request.onload = function () {
+		var content = document.getElementById('content');
+		content.innerHTML = request.responseText;
+		changeHomeParams(data);
+	};
+	request.open('GET', './homescreen.html');
+	request.send(null);
+	hideSidenav();
+	var icon = document.getElementById('menuIcon');
+	icon.style.display = "block";
+	var sidenav = document.getElementById('sidenav');
+	sidenav.style.display = "block";
+	change_text("Home")
 	
 }
 
@@ -9,7 +35,7 @@ function loginData(data) {
 		alert('Invalid username or password');
 	}
 	else {
-		loadHomePage(data);
+		loadHome(data);
 	}
 }
 
