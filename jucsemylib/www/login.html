@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="css/login.css">
 
-<form name="loginForm" onsubmit="return login(document.loginForm.uname.value,document.loginForm.psw.value);">
+<form name="loginForm" onsubmit="return false">
     <h2>Login</h2>
     <div class="container">
         <label for="cardno"><b>CardNo</b></label>
@@ -9,7 +9,7 @@
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
 
-        <button type="submit">Login</button>
+        <button type="submit" onclick="return login(document.loginForm.uname.value,document.loginForm.psw.value,document.loginForm.remember.checked);">Login</button>
         <label>
 			<input type="checkbox" checked="checked" name="remember"> Remember me
 		</label>
