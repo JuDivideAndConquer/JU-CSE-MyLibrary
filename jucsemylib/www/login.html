@@ -1,29 +1,21 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/login.css">
-</head>
-<body>
-	<div id="box1">
-		<h2>Login</h2>
-	</div>
-	<form method="POST",action="/login.php">
-  		<div class="container">
-    		<label for="cardno"><b>CardNo</b></label>
-    		<input type="text" placeholder="Enter your card No" name="uname" required>
+<link rel="stylesheet" type="text/css" href="css/login.css">
 
-    		<label for="psw"><b>Password</b></label>
-    		<input type="password" placeholder="Enter Password" name="psw" required>
-        
-    		<button type="submit">Login</button>
-    		<label>
-      		<input type="checkbox" checked="checked" name="remember"> Remember me
-    		</label>
-  		</div>
-      <!--navigation link-->
-      <div id="navbar">
-      <a href="#forgetpasword">Forget Password?</a>
-      </div>
-      <!-- forget password containt will be here-->
-      <div id="container"></div>
-	</form>
-</body>
-<script type="text/javascript" src="js/login.js"></script>
+<form name="loginForm" onsubmit="return false">
+    <h2>Login</h2>
+    <div class="container">
+        <label for="cardno"><b>CardNo</b></label>
+        <input type="text" placeholder="Enter your card No" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit" onclick="return login(document.loginForm.uname.value,document.loginForm.psw.value,document.loginForm.remember.checked);">Login</button>
+        <label>
+			<input type="checkbox" checked="checked" name="remember"> Remember me
+		</label>
+    </div>
+
+</form>
+<br>
+<span><a class="signup" href='forgetpasword.html'>Forgot password?</a></span><br>
+<div><a class="signup" href='signUp.html'>New? SignUp here</a> </div>
