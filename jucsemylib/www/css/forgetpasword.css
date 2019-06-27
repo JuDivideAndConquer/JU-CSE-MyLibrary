@@ -3,7 +3,7 @@
 body{
   font-family: Arial, Helvetica, 
   sans-serif;
-  background-color: silver;
+  background-color: var(--dark);
 }
 .header{
 	display: flex;
@@ -11,7 +11,12 @@ body{
 	align-items: center;
 	margin: 0;
 	padding: 0; 
+	color: var(--light);
 	/*width:*/ 
+}
+
+b{
+	color: var(--light);
 }
 button{
 	background-color: var(--secondary);
@@ -27,7 +32,7 @@ button .
 
 form {
 	border: 3px solid #f1f1f1;
-	background-color: #DCDCDC;
+	background-color: var(--dark);
 }
 input[type="email"]{
 	width: 100%;
@@ -49,6 +54,9 @@ input[type="email"]{
 	border: 2px solid;
 	border-color: white;
 	border-radius: 20px;
+}
+p{
+	color: var(--primary-dark);
 }
 
 /* Give the user an affordance that each link is clickable. */
