@@ -27,4 +27,8 @@ function loadloginPage(){
 
 document.addEventListener('deviceready',function(){
 	window.onhashchange=loadloginPage;
+
+	document.addEventListener('backbutton', function(){
+    navigator.app.exitApp();
+	});
 });

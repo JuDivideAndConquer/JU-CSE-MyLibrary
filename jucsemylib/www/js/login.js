@@ -22,6 +22,10 @@ function loadforgetPage(){
 	console.log("sona ato vhule gele CO ki kore porbe");
 }
 
+
+//============================backbutton event============================================
+
+
 //============================end of the function for forget password======================
 
 document.addEventListener('deviceready',function(){
