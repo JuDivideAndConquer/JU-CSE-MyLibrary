@@ -1,7 +1,7 @@
 //=====================functions for login and sign up page======================================
 
 //retrives the forget password page
-function getloginPage(fragmentId,callback){
+/*function getloginPage(fragmentId,callback){
 	var request = new XMLHttpRequest();
 	request.onload = function(){
 		callback(request.responseText);
@@ -31,4 +31,12 @@ document.addEventListener('deviceready',function(){
 	document.addEventListener('backbutton', function(){
     navigator.app.exitApp();
 	});
-});
+});*/
+
+function forget(emailId) {
+    console.log(emailId);
+    $.post("http://jucse-mylib.000webhostapp.com/login.php", { em: emailId})
+        .done(function(data) {
+        });
+    return false;
+}

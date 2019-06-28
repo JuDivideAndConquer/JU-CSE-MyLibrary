@@ -1,29 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Forgetpasword</title>
-  <link rel="stylesheet" href="css/forgetpasword.css">
-</head>
-<body>
-  <div class="continer">
-    <div class="header">
-      <h1>Forget Password</h1>
-    </div>
+
+<link rel="stylesheet" href="css/forgetpasword.css">
+<div class="continer">
+   <div class="header">
+    <h1>Forget Password</h1>
+  </div>
     <!--navigation links-->
     <!-----div id="tempButton">
       <a href="#login">Login</a>
       <a href="#signUp">Signup</a>
     </div--->
-    <div id="cont"></div>
-    <div>
-      <p>Please enter your email address below and we will send you information to change your password</p>
-      <form action="/action_page.php">
-      <div class="from-container">
-        <label for="psw"><b>Email</b></label>
-        <input type="email" placeholder="Enter Your Email" name="psw" required>
-        <button type="submit">Reset</button>
-      </div>
+  <div id="cont"></div>
+  <div>
+    <p>Please enter your email address below and we will send you information to change your password</p>
+    <form name="forgetFrom" onsubmit="return false">
+    <div class="from-container">
+      <label for="psw"><b>Email</b></label>
+      <input type="email" placeholder="Enter Your Email" name="psw" required>
+      <button type="submit" onclick="return forget(document.forgetForm.psw.value);">Reset</button>
     </div>
   </div>
-</body>
-</html>
+</div>
