@@ -20,6 +20,7 @@ input {
     cursor: pointer;
     width: 80%;
     border-radius: 5px;
+    display: block;
 }
 
 input :focus {

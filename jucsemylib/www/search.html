@@ -7,12 +7,9 @@
 <!--Search bar-->
 
 <form name="searchForm" onsubmit="return false">
-    <input type="text" placeholder="Enter Title" name="title">
-    <input type="text" placeholder="Enter Author" name="author">
-    <input type="text" placeholder="Enter Subject" name="subject">
-    <input type="submit" id="searchSubmitButton" title="Search">
+    <input type="text" placeholder="Enter keywords fpr title, author or subject" name="keyword">
+    <button type="submit" id="searchSubmitButton" onclick="loadResults(document.searchForm.keyword.value)">Search</button>
 </form>
-<!--i class="fa fa-search" aria-hidden="true"></i-->
 <br>
 <br>
 <div id="results"></div>
