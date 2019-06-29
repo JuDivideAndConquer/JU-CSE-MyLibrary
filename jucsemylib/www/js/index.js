@@ -106,6 +106,25 @@ function logout() {
     localStorage.setItem('PREF_LOGGED_IN', false);
     loadPage('login', 'Login', null);
 }
+
+//fucntion to load the page
+function loadSearch() {
+	var request = new XMLHttpRequest();
+	request.onload = function () {
+		var content = document.getElementById('content');
+		content.innerHTML = request.responseText;
+		loadResults(null);
+	};
+	request.open('GET', './search.html');
+	request.send(null);
+	hideSidenav();
+	var icon = document.getElementById('menuIcon');
+	icon.style.display = "block";
+	var sidenav = document.getElementById('sidenav');
+	sidenav.style.display = "block";
+	change_text("Available Books")
+}
+
 //main fucntion--------------------------------------------------------
 document.addEventListener('deviceready', function() {
     var PREF_LOGGED_IN = localStorage.getItem('PREF_LOGGED_IN');

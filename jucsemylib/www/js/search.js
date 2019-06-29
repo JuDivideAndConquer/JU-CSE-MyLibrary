@@ -1,24 +1,36 @@
-//fucntion to load the page
-function loadSearch() {
-	var request = new XMLHttpRequest();
-	request.onload = function () {
-		var content = document.getElementById('content');
-		content.innerHTML = request.responseText;
-	};
-	request.open('GET', './search.html');
-	request.send(null);
-	hideSidenav();
-	var icon = document.getElementById('menuIcon');
-	icon.style.display = "block";
-	var sidenav = document.getElementById('sidenav');
-	sidenav.style.display = "block";
-	change_text("Available Books")
-	loadResults(null);
-}
-
 function displayBooks(data) {
 	var data = JSON.parse(data, true);
-	console.log(data[0]);
+	var results = document.getElementById('results');
+	for (i in data) {
+		console.log(data[i]);
+		var bookDiv = createBookDiv(data[i]);
+		results.appendChild(bookDiv);
+	}
+}
+
+function createBookDiv(book) {
+	var bookDiv = document.createElement('div');
+	bookDiv.classList.add('bookDiv');
+
+	for (item in book) {
+
+		var label = document.createElement('span');
+		label.classList.add('bookDivLabel');
+		var value = document.createElement('span');
+		value.classList.add('bookDivValue');
+
+		label.innerHTML = item + " : ";
+		if (book[item] != "") {
+			value.innerHTML = book[item];
+			var bookSubDiv = document.createElement('div');
+			bookSubDiv.classList.add('book'+item);
+			bookSubDiv.appendChild(label);
+			bookSubDiv.appendChild(value);
+			bookDiv.appendChild(bookSubDiv);
+		}
+	}
+
+	return bookDiv;
 }
 
 function loadResults(params) {
@@ -26,10 +38,8 @@ function loadResults(params) {
 		$.post("http://jucse-mylib.000webhostapp.com/searchAll.php", { d: params })
 			.done(function (data) {
 				console.log(data);
-				alert(data);
+				//alert(data);
 				displayBooks(data);
 			});
-
 	}
-
 }

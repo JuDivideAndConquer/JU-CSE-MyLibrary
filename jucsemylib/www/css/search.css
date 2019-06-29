@@ -19,3 +19,23 @@ input[type=text]:focus {
     background-color: #ddd;
     outline: none;
 }
+
+.bookDiv {
+	width : 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	padding: 10px;
+	color: var(--dark);
+	border-radius: 10px;
+	background: var(--secondary);
+}
+
+.bookDivLabel {
+	font-weight: 100;
+}
+
+.bookDivValue {
+	color: var(--dark);
+	font-weight: bold;
+}
