@@ -6,8 +6,13 @@
 
 <!--Search bar-->
 
-<spam><input type="text" placeholder="Search by title, subject, author" name="search" required></spam>
-<i class="fa fa-search" aria-hidden="true"></i>
+<form name="searchForm" onsubmit="return false">
+    <input type="text" placeholder="Enter Title" name="title">
+    <input type="text" placeholder="Enter Author" name="author">
+    <input type="text" placeholder="Enter Subject" name="subject">
+    <input type="submit" id="searchSubmitButton" title="Search">
+</form>
+<!--i class="fa fa-search" aria-hidden="true"></i-->
 <br>
 <br>
 <div id="results"></div>
