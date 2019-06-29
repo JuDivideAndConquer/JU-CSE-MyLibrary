@@ -1,19 +1,16 @@
 
 <link rel="stylesheet" href="css/forgetpasword.css">
 <div class="continer">
-   <div class="header">
+  <div class="header">
     <h1>Forget Password</h1>
   </div>
-    <!--navigation links-->
-    <!-----div id="tempButton">
-      <a href="#login">Login</a>
-      <a href="#signUp">Signup</a>
-    </div--->
   <div id="cont"></div>
   <div>
     <p>Please enter your email address below and we will send you information to change your password</p>
     <form name="forgetFrom" onsubmit="return false">
     <div class="from-container">
+      <label for="cardno"><b>CardNo</b></label>
+      <input type="text" placeholder="Enter your card No" name="uname" required>
       <label for="psw"><b>Email</b></label>
       <input type="email" placeholder="Enter Your Email" name="psw" required>
       <button type="submit" onclick="return forget(document.forgetForm.psw.value);">Reset</button>

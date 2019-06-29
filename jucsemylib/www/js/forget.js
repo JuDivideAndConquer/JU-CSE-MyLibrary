@@ -35,7 +35,7 @@ document.addEventListener('deviceready',function(){
 
 function forget(emailId) {
     console.log(emailId);
-    $.post("http://jucse-mylib.000webhostapp.com/login.php", { em: emailId})
+    $.post("http://jucse-mylib.000webhostapp.com/forget.php", { em: emailId})
         .done(function(data) {
         });
     return false;
