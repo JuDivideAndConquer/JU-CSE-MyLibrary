@@ -18,6 +18,8 @@ if($link)
 ?>
 
 <?php
+$d = "'".strval($_POST['d'])."'";
+
 
 $return_array = array();
 $sql = "SELECT * FROM book_table; ";
@@ -30,7 +32,7 @@ while($row = mysqli_fetch_assoc($result))
 	
 }
 
-$x = json_encode($row);
+$x = json_encode($return_array);
 echo $x ;
 mysqli_close($link);
 ?>
