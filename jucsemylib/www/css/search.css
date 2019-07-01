@@ -39,15 +39,18 @@ input :focus {
     border-radius: 10px;
     background: var(--secondary);
     cursor: pointer;
+    user-select: none;
 }
 
 .bookDivLabel {
     font-weight: 300;
+    user-select: none;
 }
 
 .bookDivValue {
     color: var(--dark);
     font-weight: bold;
+    user-select: none;
 }
 
 .bookDiv:active {
