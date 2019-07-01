@@ -1,9 +1,5 @@
 @import url("theme.css");
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--dark);
-    color: var(--light);
-}
+
 
 h2 {
     color: var(--light);
@@ -34,7 +30,8 @@ a {
 .signup {
     color: var(--primary-light);
     margin-left: 30%;
-    text-decoration: none;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 button {

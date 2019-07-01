@@ -3,9 +3,9 @@
     box-sizing: box-border;
 }
 
-* {
+/** {
     background-color: var(--dark);
-}
+}*/
 
 .extra-info {
     color: var(--secondary);

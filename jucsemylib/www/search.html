@@ -6,8 +6,10 @@
 
 <!--Search bar-->
 
-<spam><input type="text" placeholder="Search by title, subject, author" name="search" required></spam>
-<i class="fa fa-search" aria-hidden="true"></i>
+<form name="searchForm" onsubmit="return false">
+    <input type="text" placeholder="Enter keywords for title, author or subject" name="keyword">
+    <button type="submit" id="searchSubmitButton" onclick="loadResults(document.searchForm.keyword.value)">Search</button>
+</form>
 <br>
 <br>
 <div id="results"></div>

@@ -1,7 +1,5 @@
 @import url("theme.css");
-body{
-	background: var(--dark);
-}
+
 img{
 	display: block;
 	border-radius: 50%;
@@ -41,5 +39,6 @@ h2{display :inline;}
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 	bottom:0;
+	cursor: pointer;
 }
 
