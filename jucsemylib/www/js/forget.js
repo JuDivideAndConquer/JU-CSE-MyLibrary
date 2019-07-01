@@ -33,9 +33,10 @@ document.addEventListener('deviceready',function(){
 	});
 });*/
 
-function forget(emailId) {
+function forget(cardNo,emailId) {
     console.log(emailId);
-    $.post("http://jucse-mylib.000webhostapp.com/forget.php", { em: emailId})
+    console.log(cardNo);
+    $.post("http://jucse-mylib.000webhostapp.com/forget.php", { em: emailId, cd: cardNo})
         .done(function(data) {
         });
     return false;

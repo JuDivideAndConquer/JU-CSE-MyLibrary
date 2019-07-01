@@ -17,5 +17,19 @@ if($link)
 }
 ?>
 <?php
-$em = "'".strval($_POST['em'])."'";
+session_start();
+$rndno=rand(100000, 999999);//OTP generate
+$message = urlencode("otp number.".$rndno);
+$to=$_POST['em'];
+$subject = "OTP for jucse library";
+$txt = "Your One Time Password is: ".$rndno."";
+$headers = "From: mollasumon54@gmail.com" . "\r\n" .
+"CC: mollasumon54@gmail.com";
+mail($to,$subject,$txt,$headers);
+if(isset($_POST['btn-save']))
+{
+$_SESSION['em']=$_POST['em'];
+$_SESSION['otp']=$rndno;
+header( "Location: otp.php" ); 
+} 
 ?>
