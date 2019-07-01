@@ -38,6 +38,7 @@ input :focus {
     color: var(--dark);
     border-radius: 10px;
     background: var(--secondary);
+    cursor: pointer;
 }
 
 .bookDivLabel {
@@ -47,4 +48,8 @@ input :focus {
 .bookDivValue {
     color: var(--dark);
     font-weight: bold;
+}
+
+.bookDiv:active {
+    background-color: var(--secondary-light);
 }

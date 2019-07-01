@@ -3,8 +3,8 @@ function displayBooks(data) {
     var results = document.getElementById('results');
     results.innerHTML = "";
     for (i in data) {
-        console.log(data[i]);
         var bookDiv = createBookDiv(data[i]);
+        let book = data[i];
         results.appendChild(bookDiv);
     }
 }
@@ -32,10 +32,11 @@ function createBookDiv(book) {
             bookSubDiv.appendChild(label);
             bookSubDiv.appendChild(value);
             bookDiv.appendChild(bookSubDiv);
-            bookDiv.addEventListener('onclick', issueBook(book[item]));
         }
     }
-
+    bookDiv.addEventListener('click', function(event) {
+        issueBook(book);
+    });
     return bookDiv;
 }
 
@@ -43,16 +44,12 @@ function loadResults(keyword) {
     if (keyword == null) {
         $.post("http://jucse-mylib.000webhostapp.com/search.php", { d: keyword })
             .done(function(data) {
-                console.log(data);
-                //alert(data);
                 displayBooks(data);
             });
     } else {
         console.log(keyword);
         $.post("http://jucse-mylib.000webhostapp.com/search.php", { d: keyword })
             .done(function(data) {
-                console.log(data);
-                //alert(data);
                 displayBooks(data);
             });
     }
