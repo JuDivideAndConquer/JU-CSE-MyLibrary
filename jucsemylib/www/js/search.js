@@ -9,6 +9,10 @@ function displayBooks(data) {
     }
 }
 
+function issueBook(book) {
+    console.log(book);
+}
+
 function createBookDiv(book) {
     var bookDiv = document.createElement('div');
     bookDiv.classList.add('bookDiv');
@@ -28,6 +32,7 @@ function createBookDiv(book) {
             bookSubDiv.appendChild(label);
             bookSubDiv.appendChild(value);
             bookDiv.appendChild(bookSubDiv);
+            bookDiv.addEventListener('onclick', issueBook(book[item]));
         }
     }
 
