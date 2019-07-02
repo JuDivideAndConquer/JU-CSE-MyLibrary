@@ -33,11 +33,13 @@ document.addEventListener('deviceready',function(){
 	});
 });*/
 
-function forget(cardNo,emailId) {
+function forget(cardNo,emailId)
+{
     console.log(emailId);
     console.log(cardNo);
     $.post("http://jucse-mylib.000webhostapp.com/forget.php", { em: emailId, cd: cardNo})
         .done(function(data) {
+			alert (data);
         });
     return false;
 }
