@@ -1,36 +1,15 @@
-@import url("theme.css");s
-body{
-  font-family: Arial, Helvetica, 
-  sans-serif;
-  background-color: var(--dark);
-}
-.header{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0;
-	padding: 0; 
-	color: var(--light);
-	/*width:*/ 
-}
+@import url("theme.css");
 
+h2 {
+    color: var(--light);
+    margin: 28px 0;
+    padding: 12px 20px;
+}
+form{
+    background-color: var(--dark);
+}
 b{
 	color: var(--light);
-}
-button{
-	background-color: var(--secondary);
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	cursor: pointer;
-	width: 100%;
-	border-radius: 5px;
-}
-button .
-
-form {
-	background-color: var(--dark);
 }
 input[type=email],
 input[type=text]{
@@ -42,7 +21,27 @@ input[type=text]{
 	box-sizing: border-box;
 	border-radius: 5px;
 }
-#tempButton a{
+a{
+    color: var(--light);
+}
+button{
+	background-color: var(--secondary);
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 5px;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+}
+/*#tempButton a{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.5em;
 	margin: 0px 10px 0px 10px;
@@ -58,12 +57,12 @@ p{
 	color: var(--fuck);
 }
 
-/* Give the user an affordance that each link is clickable. */
+Give the user an affordance that each link is clickable.
 #tempSignupButton a,#tempLoginButton a:hover {
 	border-color: black;
 }
 
-/* Style the active page link. */
+/*Style the active page link. 
 #tempButton a.active{
 	border-color: gray;
-}
+}*/

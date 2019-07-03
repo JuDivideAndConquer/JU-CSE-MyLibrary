@@ -21,7 +21,7 @@ input[type=password] {
     border-radius: 5px;
 }
 
-a {
+a{
     color: var(--light);
 }
 

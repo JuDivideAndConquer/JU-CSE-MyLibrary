@@ -1,19 +1,18 @@
-<link rel="stylesheet" href="css/forgetpasword.css">
-<div class="continer">
-  <div class="header">
-    <h1>Forget Password</h1>
-  </div>
-  <div id="cont"></div>
-  <div>
-    <p>Please enter your email address below and we will send you information to change your password</p>
-    <form name="forgetForm" onsubmit="return false">
-    <div class="from-container">
-      <label for="cardno"><b>CardNo</b></label>
-      <input type="text" placeholder="Enter your card No" name="crdno" required>
-      <label for="psw"><b>Email</b></label>
-      <input type="email" placeholder="Enter Your Email" name="email" required>
-      <button type="submit" onclick="return forget(document.forgetForm.crdno.value,document.forgetForm.email.value);">Reset</button>
+<link rel="stylesheet" type="text/css" href="css/forgetpasword.css">
+
+<form name="forgetForm" onsubmit="return false">
+  <h2>Forget Password</h2>
+  <div class="continer"></div>
+    <div id="cont"></div>
+    <div>
+      <p>Please enter your email address below and we will send you information to change your password</p>
+      <div class="from-container">
+        <label for="cardno"><b>CardNo</b></label>
+        <input type="text" placeholder="Enter your card No" name="crdno" required>
+        <label for="psw"><b>Email</b></label>
+        <input type="email" placeholder="Enter Your Email" name="email" required>
+        <button type="submit" onclick="return forget(document.forgetForm.crdno.value,document.forgetForm.email.value);">Reset</button>
+      </div>
     </div>
-    </form>
   </div>
-</div>
+</form>
