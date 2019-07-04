@@ -1,17 +1,40 @@
-<?PHP
-$sender = 'sadrulju@gmail.com';
-$recipient = "'".strval($_POST['em'])."'";
+<?php
+require 'PHPMailerAutoload.php';
+require 'credential.php';
 
-$subject = "php mail test";
-$message = "php test message";
-$headers = 'From:' . $sender;
+$mail = new PHPMailer();
 
-if (mail($recipient,$subject,$message,null,$headers))
-{
-    echo "Message accepted";
-}
-else
-{
-    echo "Error: Message not accepted";
+//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+$mail->isSMTP();                                    // Set mailer to use SMTP
+$mail->Host = 'smtp1.gmail.com';                    // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;
+$mail->SMTPKeepAlive = true;   						// Enable SMTP authentication
+$mail->Mailer = “smtp”; // don't change the quotes!               
+$mail->Username = EMAIL;                         	// SMTP username
+$mail->Password = PASS;                           	// SMTP password
+$mail->SMTPSecure = 'tls';                         // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587;                                  // TCP port to connect to
+
+$mail->setFrom(EMAIL, 'JU-cse-Library');
+$mail->addAddress($_POST['em']);                    // Add a recipient
+//$mail->addAddress('ellen@example.com');           // Name is optional
+$mail->addReplyTo(EMAIL);
+
+//$mail->addAttachment('/var/tmp/file.tar.gz');     // Add attachments
+//$mail->addAttachment('/tmp/image.jpg', 'new.jpg'); // Optional name
+$mail->isHTML(true);                                 // Set email format to HTML
+
+$mail->Subject = "OTP";
+$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+echo !extension_loaded('openssl')?"Not Available":"Available";
+
+if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent';
 }
 ?>
