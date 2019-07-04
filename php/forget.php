@@ -4,6 +4,8 @@ require 'credential.php';
 
 $mail = new PHPMailer();
 
+$otp=rand(100000,999999);
+
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 $mail->isSMTP();                                    // Set mailer to use SMTP
@@ -26,8 +28,8 @@ $mail->addReplyTo(EMAIL);
 $mail->isHTML(true);                                 // Set email format to HTML
 
 $mail->Subject = "OTP";
-$mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+$mail->Body    = 'Your One Time Password Is: ' .$otp;
+$mail->AltBody = 'Sorry Somthing Is Wrong Unable To Generate OTP';
 
 if(!$mail->send()) {
     echo 'Message could not be sent.';
