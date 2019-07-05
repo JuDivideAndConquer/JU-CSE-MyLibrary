@@ -14,6 +14,7 @@ body {
     overflow-x: hidden;
     padding-top: 90px;
     border-right: 2px solid var(--light);
+    z-index: 1;
 }
 
 .sidenavItems {

@@ -1,3 +1,9 @@
+//function to change text in topBar
+function change_text(text) {
+    var topnav = document.getElementById('topBarHome');
+    topnav.innerHTML = text;
+}
+
 //retrives the page
 function getPage(callback, name) {
     var request = new XMLHttpRequest();
@@ -13,12 +19,11 @@ function loadPage(name, text, data) {
     getPage(function(home) {
         content.innerHTML = home;
     }, name)
-    if (name == 'signUp' || name == 'login') {
-        hide_icon();
-    }
     change_text(text);
 }
 
-document.addEventListener('deviceready', function() {
+function ready() {
     loadPage("homescreen", "Home");
-});
+};
+
+window.onload = ready();
