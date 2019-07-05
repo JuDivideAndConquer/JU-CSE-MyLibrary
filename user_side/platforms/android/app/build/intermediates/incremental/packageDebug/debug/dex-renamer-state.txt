@@ -1,0 +1,4 @@
+#Mon Jul 01 12:23:40 IST 2019
+base.0=/home/irin/Desktop/Project/JU-CSE-MyLibrary/jucsemylib/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

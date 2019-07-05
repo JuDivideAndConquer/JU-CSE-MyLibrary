@@ -1,0 +1,66 @@
+@import url("theme.css");
+#content {
+    box-sizing: box-border;
+}
+
+/** {
+    background-color: var(--dark);
+}*/
+
+.extra-info {
+    color: var(--secondary);
+}
+
+.box {
+    padding: 10px;
+    overflow: hidden;
+    box-sizing: box-border;
+    background-color: var(--dark);
+    color: var(--light)
+}
+
+
+/* input fields */
+
+input[type=text],
+input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid var(--secondary);
+    margin-left: 0%;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+
+/* Sign up button */
+
+button {
+    background-color: var(--primary-dark);
+    color: var(--light);
+    padding: 14px 20px;
+    margin-left: 2.5%;
+    border: none;
+    cursor: pointer;
+    width: 95%;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 1;
+}

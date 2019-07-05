@@ -1,0 +1,50 @@
+@import url("theme.css");
+input {
+    width: 80%;
+    padding: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+#searchSubmitButton {
+    background-color: var(--primary);
+    color: white;
+    padding: 14px 20px;
+    margin: 15px auto;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 5px;
+    display: block;
+}
+
+input :focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.bookDiv {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    color: var(--dark);
+    border-radius: 10px;
+    background: var(--secondary);
+}
+
+.bookDivLabel {
+    font-weight: 300;
+}
+
+.bookDivValue {
+    color: var(--dark);
+    font-weight: bold;
+}
