@@ -10,18 +10,13 @@
 
 <body>
     <div id="sidenav">
-        <div class="sidenavItems" onclick="loadHome(localStorage.getItem('user_data'))">Home</div>
-        <div class="sidenavItems" onclick="loadSearch()">Issue Book</div>
+        <div class="sidenavItems" onclick="loadPage('homescreen','Home')">Home</div>
+        <div class="sidenavItems" onclick="loadPage('search','Pending Issues')">Issue Book</div>
         <div class="sidenavItems" onclick="loadPage('returnBook','Return Book')">Return Book</div>
         <div class="sidenavItems" onclick="logout()">Log Out</div>
     </div>
     <div id="topBar">
-        <div id="menuIcon" onclick="showSidenav()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div id="topBarHome">Home</div>
+        <div id="topBarHome">Jadavpur University : Computer Science Departmental Library</div>
     </div>
     <div id="content">
         <!--content loads here-->
@@ -31,6 +26,7 @@
     </script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 

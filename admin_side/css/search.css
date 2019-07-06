@@ -1,0 +1,57 @@
+@import url("theme.css");
+input {
+    width: 50%;
+    padding: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+#searchSubmitButton {
+    background-color: var(--primary);
+    color: white;
+    padding: 14px 20px;
+    margin: 15px auto;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+}
+
+input :focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.bookDiv {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    color: var(--dark);
+    border-radius: 10px;
+    background: var(--secondary);
+    cursor: pointer;
+    user-select: none;
+}
+
+.bookDivLabel {
+    font-weight: 300;
+    user-select: none;
+}
+
+.bookDivValue {
+    color: var(--dark);
+    font-weight: bold;
+    user-select: none;
+}
+
+.bookDiv:active {
+    background-color: var(--secondary-light);
+}
