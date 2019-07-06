@@ -4,26 +4,24 @@ function change_text(text) {
     topnav.innerHTML = text;
 }
 
-//retrives the page
-function getPage(callback, name) {
-    var request = new XMLHttpRequest();
-    request.onload = function() {
-        callback(request.responseText);
-    };
-    request.open('GET', './' + name + '.html');
-    request.send(null);
-}
 //fucntion to load the page
 function loadPage(name, text, data) {
-    var content = document.getElementById('content');
-    getPage(function(home) {
-        content.innerHTML = home;
-    }, name)
+    $('#content').load( './' + name + '.html');
     change_text(text);
 }
 
-function ready() {
-    loadPage("homescreen", "Home");
-};
+function load_data(x){
+    if(x==1){
+        $.post("http://jucse-mylib.000webhostapp.com/admin_side/load_data.php", { type: '1' })
+        .done(function(data) {
+            alert(data);
+           // var arr = JSON.parse(data, true);
+           //  $(".reminder").html(arr[0]);
+        });
+    }
+}
 
-window.onload = ready();
+
+//Main
+window.onload =  loadPage("homescreen", "Home");
+load_data(1);
