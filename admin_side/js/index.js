@@ -9,7 +9,6 @@ function login(password, checked) {
     console.log("login button pressed");
     $.post("http://jucse-mylib.000webhostapp.com/admin_side/login.php", { pw: password })
         .done(function(data) {
-            alert(data);
             if (data == false) {
                 alert('Invalid password');
                 return false;
