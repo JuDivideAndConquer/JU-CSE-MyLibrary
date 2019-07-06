@@ -21,15 +21,18 @@ if($link)
 <?php
 $x = $_POST['type'];
 if($x==1){
-    $sql = "SELECT COUNT(*) FROM pending_issue_table";
-    $result = mysqli_query($link , $sql) or die(mysqli_error($link)."".$sql);
-    $row=mysqli_fetch_assoc($result);
     $return_array = array();
+    $sql = "SELECT COUNT(*) FROM pending_issue_table WHERE status=1";
+    $sql1 = "SELECT COUNT(*) FROM pending_issue_table WHERE status=0";
+    $result = mysqli_query($link , $sql) or die(mysqli_error($link)."".$sql);
+    $result1 = mysqli_query($link , $sql1) or die(mysqli_error($link)."".$sql);
+    $row=mysqli_fetch_assoc($result);
     array_push($return_array, $row);
-    $x = json_encode($result_array);
+    $row=mysqli_fetch_assoc($result1);
+    array_push($return_array, $row);
+    $x = json_encode($return_array);
     echo $x ;
     mysqli_close($link);
-
 }
 
 
