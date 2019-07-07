@@ -1,6 +1,6 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 0);
+error_reporting(E_ERROR | E_PARSE);
 
 
 $servername = "localhost";
@@ -17,6 +17,7 @@ if($link)
 }
 ?>
 <?php
+date_default_timezone_set (Asia/Kolkata);
 require 'PHPMailerAutoload.php';
 require 'credential.php';
 
@@ -58,8 +59,18 @@ if($count>0)
 	    echo 'Message could not be sent.';
 	    echo 'Mailer Error: ' . $mail->ErrorInfo;
 	} else {
-	    echo 'Message has been sent';
+		$today=date("Y-m-d H:i:s");
+		$sql_push="INSERT INTO otp_validity VALUES($otp,$today,'0')";
+		if ($link->query($sql_push) === TRUE) {
+			echo "Check Your email For OTP";
+		} else {
+			echo "Error: " . $sql_push . "<br>" . $link->error;
+		}		
+	    //echo 'Message has been sent';
 	}
+}
+else{
+	echo 'Invalid Card No';
 }
 mysqli_close($link);
 ?>
