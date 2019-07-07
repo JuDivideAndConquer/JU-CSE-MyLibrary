@@ -1,34 +1,6 @@
 @import url("theme.css");
-input {
-    width: 50%;
-    padding: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    border: none;
-    background: #f1f1f1;
-    border-radius: 5px;
-}
-
-#searchSubmitButton {
-    background-color: var(--primary);
-    color: white;
-    padding: 14px 20px;
-    margin: 15px auto;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    display: block;
-}
-
-input :focus {
-    background-color: #ddd;
-    outline: none;
-}
-
 .bookDiv {
-    width: 80%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
