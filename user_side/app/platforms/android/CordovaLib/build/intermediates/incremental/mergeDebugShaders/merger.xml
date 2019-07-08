@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/irin/Desktop/Project/JU-CSE-MyLibrary/jucsemylib/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/irin/Desktop/Project/JU-CSE-MyLibrary/jucsemylib/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/irin/Desktop/Project/1/JU-CSE-MyLibrary/user_side/app/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/irin/Desktop/Project/1/JU-CSE-MyLibrary/user_side/app/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>
