@@ -12,7 +12,7 @@ img {
 .info {
     text-align: center;
     font-family: 'Arvo', serif;
-    color: var(--light);
+    color: var(--dark);
 }
 
 hr {
@@ -20,12 +20,12 @@ hr {
 }
 
 .book_info {
-    color: var(--secondary);
+    color: var(--primary-dark);
     text-align: center;
 }
 
 .extra_info {
-    color: var(--faint);
+    color: var(--dark);
     text-align: center;
 }
 
@@ -34,7 +34,7 @@ h2 {
 }
 
 .reminder {
-    background: var(--primary-dark);
+    background: var(--dark);
     color: var(--light);
     padding: 20px;
     text-align: center;

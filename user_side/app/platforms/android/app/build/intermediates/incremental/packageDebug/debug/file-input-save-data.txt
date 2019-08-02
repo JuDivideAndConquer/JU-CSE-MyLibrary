@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Jul 07 13:17:40 IST 2019
+#Mon Jul 08 12:43:14 IST 2019
 17.baseType=DIRECTORY
 4.path=www/css/login.css
 25.base=/home/irin/Desktop/Project/1/JU-CSE-MyLibrary/user_side/app/platforms/android/app/build/intermediates/assets/debug

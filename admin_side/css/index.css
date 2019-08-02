@@ -2,13 +2,13 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--dark);
-    color: var(--light);
+    background-color: var(--light);
+    color: var(--dark);
     transition: background-color .5s;
 }
 
 #sidenav {
-    background-color: #263238;
+    background-color:#263238;
     color: rgb(200, 200, 200);
     height: 100%;
     position: fixed;

@@ -95,7 +95,6 @@ function issueReturnBook(book, keyword) {
 
     $.post('http://jucse-mylib.000webhostapp.com/admin_side/issue.php', { ass: book['acession_number'], cd: book['card_number'], key: keyword })
         .done(function(data) {
-			//alert(data);
             if (data == 1) {
                 if (keyword == 1) {
                     alert('Issue successful');
