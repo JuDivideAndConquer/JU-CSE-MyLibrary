@@ -1,20 +1,46 @@
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-	<link rel="stylesheet" href="css/index.css">
-        <title>JU-CSE-MyLib</title>
-    </head>
-    <body>
-	<div class="bg">
-        <button id="tempLoginButton" onclick="window.location.href='login.html';">Login</button>
-        <button id="tempSignupButton" onclick="window.location.href='signUp.html';">Signup</button>
-        <button id="tempHomePageButton" onclick="window.location.href='home.html';">Home</button>
-	</div>	
-    </body>
+
+<head>
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Library</title>
+</head>
+
+<body>
+    <div id="sidenav">
+        <div class="sidenavItems" id="hideSidenavButton" onclick="hideSidenav()">&times;</div>
+        <div class="sidenavItems" onclick="loadHome(localStorage.getItem('user_data'))">Home</div>
+        <div class="sidenavItems" onclick="loadSearch()">Issue Book</div>
+        <div class="sidenavItems" onclick="loadPage('returnBook','Return Book')">Return Book</div>
+        <div class="sidenavItems" onclick="logout()">Log Out</div>
+    </div>
+    <div id="topBar">
+        <div id="menuIcon" onclick="showSidenav()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="topBarHome">Home</div>
+    </div>
+    <div id="content">
+        <!--content loads here-->
+    </div>
+
+
+    </script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/signUp.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/forget.js"></script>
+    <script type="text/javascript" src="js/otp.js"></script>
+    <script type="text/javascript" src="js/password.js"></script>
+
+</body>
+
 </html>
- 
