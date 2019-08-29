@@ -3,6 +3,9 @@
     --primary-light: #81D4FA;
     --primary-dark: #01579B;
     --secondary: #FFCC80;
+    --secondary-light: rgb(144, 110, 58);
     --dark: #212121;
+    --fuck: rgb(200, 200, 200);
     --light: #FAFAFA;
+    --faint: grey;
 }
