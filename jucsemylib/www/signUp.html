@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/signUp.css">
-<form name="signupForm" onsubmit="return signUp(document.signupForm.cardnumber.value,document.signupForm.name.value,document.signupForm.course.value,document.signupForm.psw.value,document.signupForm.pswconfirm.value);">
+<form name="signupForm" onsubmit="return signUp(document.signupForm.cardnumber.value,document.signupForm.name.value,document.signupForm.course.value,document.signupForm.psw.value,document.signupForm.pswconfirm.value,document.signupForm.mail.value);">
 	<div class="box">
 		<h1>Sign Up</h1>
 		<div class="extra-info">Fill in to start acessing the Library</div>
@@ -19,6 +19,9 @@
 
 		<label for="pswconfirm"><b>Confirm Password</b></label><br>
 		<input type="password" placeholder="Confirm Password" name="pswconfirm" required><br>
+
+		<label for="mailid"><b>Email</b></label><br>
+    	<input type="email" placeholder="Enter Your Email" name="mail" required><br>
 
 		<label>
 			<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
