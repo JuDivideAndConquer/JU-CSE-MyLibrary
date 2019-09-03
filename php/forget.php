@@ -23,7 +23,7 @@ require 'credential.php';
 
 $mail = new PHPMailer();
 $cd = "'".strval($_POST['cd'])."'";
-$sql = "SELECT * FROM user_table WHERE card_number=$cd; ";
+$sql = "SELECT * FROM user_table WHERE card_number=$cd AND mail_id=em; ";
 $result = mysqli_query($link , $sql);
 $count=mysqli_num_rows($result);
 if($count>0)
@@ -70,7 +70,7 @@ if($count>0)
 	}
 }
 else{
-	echo 'Invalid Card No';
+	echo 'Invalid Card No or Email Id';
 }
 mysqli_close($link);
 ?>
