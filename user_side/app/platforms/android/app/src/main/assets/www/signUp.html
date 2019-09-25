@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="css/signUp.css">
+<form name="signupForm" onsubmit="return signUp(document.signupForm.cardnumber.value,document.signupForm.name.value,document.signupForm.course.value,document.signupForm.psw.value,document.signupForm.pswconfirm.value,document.signupForm.mail.value);">
+	<div class="box">
+		<h1>Sign Up</h1>
+		<div class="extra-info">Fill in to start acessing the Library</div>
+		<hr>
+
+		<label for="cardnumber"><b>Library Card Number</b></label><br>
+		<input type="text" placeholder="Enter card number" name="cardnumber" required><br>
+
+		<label for="name"><b>Name</b></label><br>
+		<input type="text" placeholder="Enter your name" name="name" required><br>
+
+		<label for="course"><b>Course</b></label><br>
+		<input type="text" placeholder="Enter course" name="course" required><br>
+
+		<label for="psw"><b>Password</b></label><br>
+		<input type="password" placeholder="Enter Password" name="psw" required><br>
+
+		<label for="pswconfirm"><b>Confirm Password</b></label><br>
+		<input type="password" placeholder="Confirm Password" name="pswconfirm" required><br>
+
+		<label for="mailid"><b>Email</b></label><br>
+    	<input type="email" placeholder="Enter Your Email" name="mail" required><br>
+
+		<label>
+			<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+		</label>
+
+		<br><br>
+		<button type="submit" class="signupbtn">Sign Up</button>
+	</div>
+</form>

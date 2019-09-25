@@ -1,0 +1,52 @@
+@import url("theme.css");
+h2 {
+    color: var(--light);
+    margin: 28px 0;
+    padding: 12px 20px;
+}
+
+form {
+    /*border: 3px solid #f1f1f1;*/
+    background-color: var(--dark);
+}
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+a{
+    color: var(--light);
+}
+
+.signup {
+    color: var(--primary-light);
+    margin-left: 30%;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+button {
+    background-color: var(--secondary);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+}

@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="css/otp.css">
+<form name="otp_form" onsubmit="return false">
+    <h2>OTP</h2>
+    <div class=otp_container>
+        <input type="text" placeholder="Enter your 6 digit OTP" name="otpvalue" required>
+
+        <button type="submit" name="save" onclick="return otpcheck(document.otp_form.otpvalue.value);">Submit</button>
+    </div>
+</form>
+
+        
