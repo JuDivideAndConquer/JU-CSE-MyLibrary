@@ -1,0 +1,29 @@
+@import url("theme.css");
+.bookDiv {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    color: var(--dark);
+    border-radius: 10px;
+    background: var(--secondary);
+    cursor: pointer;
+    user-select: none;
+}
+
+.bookDivLabel {
+    font-weight: 300;
+    user-select: none;
+}
+
+.bookDivValue {
+    color: var(--dark);
+    font-weight: bold;
+    user-select: none;
+}
+
+.bookDiv:active {
+    background-color: var(--secondary-light);
+}

@@ -1,0 +1,78 @@
+@import url("theme.css");
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    transition: background-color .5s;
+}
+
+#sidenav {
+    background-color:#263238;
+    color: rgb(200, 200, 200);
+    height: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    padding-top: 90px;
+    border-right: 2px solid var(--faint);
+    z-index: 1;
+}
+
+.sidenavItems {
+    width: inherit;
+    padding: 18px 38px 18px 32px;
+    font-size: 25px;
+    display: block;
+    overflow: hidden;
+}
+
+#sidenav .sidenavItems:hover {
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+#topBar {
+    box-sizing: border-box;
+    padding: 5px;
+    padding-left: 15px;
+    margin: 0;
+    width: 100vw;
+    height: 60px;
+    overflow: hidden;
+    background-color: #263238;
+    color: rgb(200, 200, 200);
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    font-size: 25px;
+    border-bottom: 2px solid var(--faint);
+}
+
+#topBar>* {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#menuIcon>div {
+    width: 35px;
+    height: 5px;
+    margin: 5px 0;
+    background-color: rgb(200, 200, 200);
+    border-radius: 3px;
+}
+
+#topBarHome {
+    padding: inherit;
+    float: left;
+}
+
+#hideSidenavButton {
+    text-align: center;
+    font-size: 40px;
+}
+
+#content {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
