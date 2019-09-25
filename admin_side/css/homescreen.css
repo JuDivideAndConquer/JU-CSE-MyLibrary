@@ -1,0 +1,44 @@
+@import url("theme.css");
+img {
+    display: block;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+    padding: 30px;
+}
+
+.info {
+    text-align: center;
+    font-family: 'Arvo', serif;
+    color: var(--dark);
+}
+
+hr {
+    border: 1px solid var(--light);
+}
+
+.book_info {
+    color: var(--primary-dark);
+    text-align: center;
+}
+
+.extra_info {
+    color: var(--dark);
+    text-align: center;
+}
+
+h2 {
+    display: inline;
+}
+
+.reminder {
+    background: var(--dark);
+    color: var(--light);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    bottom: 0;
+    cursor: pointer;
+}
