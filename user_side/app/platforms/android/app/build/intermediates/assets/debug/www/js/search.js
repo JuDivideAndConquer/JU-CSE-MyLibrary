@@ -9,8 +9,41 @@ function displayBooks(data) {
     }
 }
 
+function changeIssuedBooks(x, acess) {
+    var user_data = JSON.parse(x);
+    $.post("http://jucse-mylib.000webhostapp.com/change.php", { is: user_data["books_issued"], cd: user_data["card_number"], ass: acess })
+        .done(function(data) {
+            console.log(data);
+        });
+}
+
 function issueBook(book) {
     console.log(book);
+
+    var user_data = JSON.parse(localStorage.getItem('user_data'), true);
+    var card = user_data["card_number"];
+    var num = user_data["books_issued"];
+    if (num > 1) {
+        alert("Cannot issue more than 2 books.");
+        return;
+    }
+    var r = confirm("Do you wish to issue this ?");
+    console.log(r);
+    if (r == false) { return; }
+
+    $.post("http://jucse-mylib.000webhostapp.com/issue.php", { ass: book["acession_number"], cd: card })
+        .done(function(data) {
+            if (data == 1) {
+                user_data["books_issued"] = (parseInt(user_data["books_issued"]) + 1);
+                var x = JSON.stringify(user_data);
+                localStorage.setItem('user_data', x);
+                changeIssuedBooks(x, book["acession_number"]);
+                alert("Issue request successful");
+            } else {
+                alert("Book not available. Try again later.");
+            }
+        });
+
 }
 
 function createBookDiv(book) {
