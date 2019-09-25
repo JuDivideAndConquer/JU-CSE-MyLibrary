@@ -23,7 +23,8 @@ require 'credential.php';
 
 $mail = new PHPMailer();
 $cd = "'".strval($_POST['cd'])."'";
-$sql = "SELECT * FROM user_table WHERE card_number=$cd AND mail_id=em; ";
+$em= "'".strval($_POST['em'])."'";
+$sql = "SELECT * FROM user_table WHERE card_number=$cd AND mail_id=$em";
 $result = mysqli_query($link , $sql);
 $count=mysqli_num_rows($result);
 if($count>0)
@@ -60,7 +61,7 @@ if($count>0)
 	    echo 'Mailer Error: ' . $mail->ErrorInfo;
 	} else {
 		$today=date("Y-m-d H:i:s");
-		$sql_push="INSERT INTO otp_validity VALUES($otp,$today,'0')";
+		$sql_push="INSERT INTO otp_validity VALUES($otp,'0',$cd)";
 		if ($link->query($sql_push) === TRUE) {
 			echo "Check Your email For OTP";
 		} else {
