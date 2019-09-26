@@ -52,12 +52,12 @@
         "source": "/home/irin/Desktop/Project/1/JU-CSE-MyLibrary/user_side/app/platforms/android/app/src/main/res/drawable-land-xhdpi/screen.png"
     },
     {
-        "merged": "/home/irin/Desktop/Project/1/JU-CSE-MyLibrary/user_side/app/platforms/android/app/build/intermediates/res/merged/debug/mipmap-ldpi_icon.png.flat",
-        "source": "/home/irin/Desktop/Project/1/JU-CSE-MyLibrary/user_side/app/platforms/android/app/src/main/res/mipmap-ldpi/icon.png"
-    },
-    {
         "merged": "/home/irin/Desktop/Project/JU-CSE-MyLibrary/jucsemylib/platforms/android/app/build/intermediates/res/merged/debug/xml_config.xml.flat",
         "source": "/home/irin/Desktop/Project/JU-CSE-MyLibrary/jucsemylib/platforms/android/app/src/main/res/xml/config.xml"
+    },
+    {
+        "merged": "/home/irin/Desktop/Project/1/JU-CSE-MyLibrary/user_side/app/platforms/android/app/build/intermediates/res/merged/debug/mipmap-ldpi_icon.png.flat",
+        "source": "/home/irin/Desktop/Project/1/JU-CSE-MyLibrary/user_side/app/platforms/android/app/src/main/res/mipmap-ldpi/icon.png"
     },
     {
         "merged": "/home/irin/Desktop/Project/1/JU-CSE-MyLibrary/user_side/app/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-hdpi_screen.png.flat",

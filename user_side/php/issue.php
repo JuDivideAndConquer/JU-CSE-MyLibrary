@@ -19,16 +19,15 @@ if($link)
 
 <?php
 $cd = "'".strval($_POST['cd'])."'";
-$pw = "'".strval($_POST['pw'])."'";
-$nm = "'".strval($_POST['nm'])."'";
-$cs = "'".strval($_POST['cs'])."'";
+$ass = "'".strval($_POST['ass'])."'";
+
 $return_array = array();
-$sql = "INSERT INTO user_table VALUES($nm,$cd,$cs,'1','0',$pw) ;";
+$sql = "INSERT INTO pending_issue_table VALUES($ass,$cd,CURDATE(),DATE_ADD(CURDATE(), INTERVAL 30 DAY));";
 
 if ($link->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo 1;
 } else {
-    echo "Error: " . $sql . "<br>" . $link->error;
+    echo 0;
 }
 
 $link->close();

@@ -94,7 +94,7 @@ function loadPage(name, text, data) {
     getPage(function(home) {
         content.innerHTML = home;
     }, name)
-    if (name == 'signUp' || name == 'login' || name =='forgetpasword') {
+    if (name == 'signUp' || name == 'login') {
         hide_icon();
     }
     change_text(text);
