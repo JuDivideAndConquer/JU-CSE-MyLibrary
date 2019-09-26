@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Sep 26 19:39:03 IST 2019
+#Thu Sep 26 20:40:36 IST 2019
 5.base=/home/sadrul/JU-CSE-MyLibrary/user_side/app/platforms/android/app/build/intermediates/assets/debug
 22.path=www/cordova-js-src/platform.js
 32.set=ASSET
