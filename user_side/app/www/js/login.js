@@ -27,6 +27,8 @@ function loadHome(data) {
     sidenav.style.display = "block";
     change_text("Home")
     localStorage.setItem('user_data', data);
+    localStorage.setItem('PREF_LOGGED_IN', checked);
+    console.log(checked);
 }
 
 function loginData(data) {
@@ -41,8 +43,6 @@ function loginData(data) {
 function login(cardnumber, password, checked) {
     console.log(cardnumber);
     console.log(password);
-    localStorage.setItem('PREF_LOGGED_IN', checked);
-    console.log(checked);
     $.post("http://jucse-mylib.000webhostapp.com/login.php", { cd: cardnumber, pw: password })
         .done(function(data) {
             console.log(data);
