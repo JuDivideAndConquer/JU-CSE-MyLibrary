@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="css/login.css">
+
+<form name="addBookForm" onsubmit="return false">
+
+    <div class="container">
+
+        <label for="acess"><b>Acession Number</b></label><br>
+        <input placeholder="Enter acession number" name="acess" required><br><br>
+
+        <label for="title"><b>Title</b></label><br>
+        <input placeholder="Enter book title" name="title" required><br><br>
+
+
+        <label for="edition"><b>Edition</b></label><br>
+        <input placeholder="Enter edition" name="edition" required><br><br>
+
+        <label for="sub"><b>Subject</b></label><br>
+        <input placeholder="Enter subject" name="sub" required><br><br>
+
+        <label for="publisher"><b>Publisher</b></label><br>
+        <input placeholder="Enter publisher" name="publisher" required><br><br>
+
+        <label for="author1"><b>Author Name</b></label><br>
+        <input placeholder="Enter author name" name="author1" required><br><br>
+
+        <label for="author2"><b>Author Name</b></label><br>
+        <input placeholder="Enter author name" name="author2"><br><br>
+
+        <label for="author3"><b>Author Name</b></label><br>
+        <input placeholder="Enter author name" name="author3"><br><br>
+
+        <label for="author4"><b>Author Name</b></label><br>
+        <input placeholder="Enter author name" name="author4"><br><br>
+
+        <label for="author5"><b>Author Name</b></label><br>
+        <input placeholder="Enter author name" name="author5"><br><br>
+
+        <label for="author6"><b>Author Name</b></label><br>
+        <input placeholder="Enter author name" name="author6"><br><br>
+
+
+        <button type="submit" onclick="return addBook(document.addBookForm.acess.value,document.addBookForm.title.value,document.addBookForm.edition.value,document.addBookForm.sub.value,document.addBookForm.publisher.value,document.addBookForm.author1.value,document.addBookForm.author2.value,document.addBookForm.author3.value,document.addBookForm.author4.value,document.addBookForm.author5.value,author6);">Add</button><br>
+        <label>
+    
+    </label>
+        <br><br>
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span style="display:inline-block; width: 125px;"></span>
+
+    </div>
+
+</form>

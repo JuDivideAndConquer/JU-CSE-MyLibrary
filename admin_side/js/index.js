@@ -147,6 +147,21 @@ function loadResults(keyword) {
         })
 }
 
+function addBook(acess, title, edition, sub, publisher, author1, author2, author3, author4, author5, author6) {
+    var r = confirm('Do you wish to add this book ?')
+    if (r == false) { return }
+
+    $.post('http://jucse-mylib.000webhostapp.com/admin_side/add.php', { acess: acess, title: title, edition: edition, subject: sub, publisher: publisher, author1: author1, author2: author2, author3: author3, author4: author4, author5: author5, author6: author6 })
+        .done(function(data) {
+            if (data == 1) {
+                alert('Successfully added.')
+
+            } else {
+                alert('Something went wrong. Try again later.')
+            }
+        })
+}
+
 
 //Main
 readyPage();
