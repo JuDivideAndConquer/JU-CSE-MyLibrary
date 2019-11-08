@@ -155,10 +155,12 @@ function addBook(acess, title, edition, sub, publisher, author1, author2, author
         .done(function(data) {
             if (data == 1) {
                 alert('Successfully added.')
-
+                return true
             } else {
                 alert('Something went wrong. Try again later.')
             }
+            //alert(data)
+
         })
 }
 

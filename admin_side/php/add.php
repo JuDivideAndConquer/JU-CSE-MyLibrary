@@ -32,7 +32,7 @@ $author5 = "'".strval($_POST['author5'])."'";
 $author6 = "'".strval($_POST['author6'])."'";
 
 $return_array = array();
-$sql = "INSERT INTO book_table acess,title,edition,subject,publisher,author1,author2,author3,author4,author5,author6; ";
+$sql = "INSERT INTO book_table $acess,$title,$edition,$subject,$publisher,$author1,$author2,$author3,$author4,$author5,$author6; ";
 if ($link->query($sql) === TRUE) {
     echo 1;
 } else {
